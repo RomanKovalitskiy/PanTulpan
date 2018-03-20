@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<title>Пан Тюльпан</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  </head>
+  <body>
+    <div class="container">
+    <div class="row wrapper">
+      <header id="header">
+      	<div class="container">
+      		<div class="row header">
+      			<div class="col-md-3">
+  					 <p class="center-img">
+             <a href="index.html">
+              <img src="img/Logo.jpg" alt="logo" border="0" height="300px">
+             </a>
+            </p>
+            </div>
+            <div class="col-md-6">
+              <p class="banner">
+                Пан Тюльпан <br> порадует ваших Дам!
+                </p>
+              <p class="UnderBanner">
+                Тюльпаны оптом <br> к 8 марта 
+              </p>
+            </div>
+            <div class="col-md-3">
+              <p class="number">+375 29 <strong>374-68-47</strong> <br> +375 29 <strong>638-03-83</strong> <br> +7 999 <strong>840-09-07</strong><br> <span style="font-size: 15px">PanTulpanInfo@gmail.com</span> </p>
+            </div>
+      		</div>
+        </div>
+      </header>   
+      <nav>
+         <ul class="list-inline menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="galerey.html" class="active">Галерея</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contact.html">Контакты</a></li>       
+        </ul>
+      </nav>
+      <section id="galerey">
+      <h1 class="text-center">Галерея</h1>
+        <div class="container ">
+          <div class="row">
+            <div id="btnLeft" class="col-md-1 "></div>
+            <div id="big_picture" class="col-md-10">
+              <img src="galerey/big/1.jpg">
+            </div>
+            <div id="btnRight" class="col-md-1"></div>
+          </div>
+          <div class="nav">
+              <img id="img_1" class="current" src="galerey/small/1.jpg" alt="Img 1">
+              <img id="img_2" src="galerey/small/2.jpg" alt="Img 2">
+              <img id="img_3" src="galerey/small/3.jpg" alt="Img 3">
+              <img id="img_4" src="galerey/small/3.jpg" alt="Img 4">
+              <img id="img_5" src="galerey/small/5.jpg" alt="Img 5">
+              <img id="img_6" src="galerey/small/6.jpg" alt="Img 6">
+              <img id="img_7" src="galerey/small/7.jpg" alt="Img 7">
+              <img id="img_8" src="galerey/small/8.jpg" alt="Img 8">
+              <img id="img_9" src="galerey/small/9.jpg" alt="Img 9">
+              <img id="img_10" src="galerey/small/10.jpg" alt="Img 10">
+              <img id="img_11" src="galerey/small/11.jpg" alt="Img 11">
+              <img id="img_12" src="galerey/small/12.jpg" alt="Img 12">
+              <img id="img_13" src="galerey/small/13.jpg" alt="Img 13">
+              <img id="img_14" src="galerey/small/14.jpg" alt="Img 14">
+              <img id="img_15" src="galerey/small/15.jpg" alt="Img 15">
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2 ">
+              <ul class="footermenu"> 
+                <li><a href="index.html" >Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="galerey.html" class="active">Галерея</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-md-offset-1" >
+              <p class="footerbanner">
+                Пан Тюльпан<br>  качество из первых рук!
+                </p>
+            </div>
+            <div class="col-md-3">
+            <p class="footernumber">+375 29 <strong>374-68-47</strong> <br> +375 29 <strong>638-03-83</strong> <br> +7 999 <strong>840-09-07</strong><br> <span style="font-size: 15px">PanTulpanInfo@gmail.com</span> </p></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    </div>
+    <script>
+        window.onload = function () {
+            var images = document.getElementsByTagName('img');
+            for(var i = 0; i < images.length; i++)
+            {
+                images[i].onclick = changeImage;
+            }
+            var leftBtn = document.getElementById('btnLeft');
+            leftBtn.onclick = clickLeft;
+            var rightBtn = document.getElementById('btnRight');
+            rightBtn.onclick = clickRight;
+        };
+        //Выбор картинки
+        function changeImage() {
+            var appDiv = document.getElementById('big_picture');
+            appDiv.innerText = '';
+            var images = document.getElementsByTagName('img'); //Выбираем все теги img
+            for(var i = 0; i < images.length; i++)
+            {
+                images[i].classList.remove('current'); //Удаляем у всех тегов img класс current
+            }
+            this.classList.add('current'); //Добавляем текущей картинке класс current;
+            var imageNamePart = this.id.split('_');
+            var src = 'galerey/big/' + imageNamePart[1] + '.jpg';
+            var imageDOM = document.createElement('img');
+            imageDOM.src = src;
+            appDiv.appendChild(imageDOM);
+        }
+        //Правая стрелка
+        function  clickRight() {
+            var currentDiv = document.getElementById('big_picture'); //Выделяем контейнер для большой картинки
+            var currentImg = document.querySelector('.current'); //Ищем текущую картинку
+            var nextImg = document.querySelector('.current + img'); //Ищем следующую картинку
+            if (nextImg === null) {
+                nextImg = document.getElementsByTagName('img')[1]; //Если следующей картинки не сущесвует переходим к первой
+            }
+            nextImg.classList.add('current'); //Добавляем класс current следующей картинке
+            var nextImgNumber = nextImg.id.split('_'); //Определяем номер следующей картинки по ее id
+            currentImg.classList.remove('current'); //Удаляем класс current у текущей картинки
+            var rightSrc = 'galerey/big/' + nextImgNumber[1] + '.jpg'; //Формируем src следующей большой картинки
+            var imageDOM = document.createElement('img');
+            imageDOM.src = rightSrc; //Устанавливаем src в следующую большую картинку
+            currentDiv.innerText = '';
+            currentDiv.appendChild(imageDOM);
+        }
+        //Левая стрелка
+        function  clickLeft() {
+            var currentDiv = document.getElementById('big_picture'); //Выделяем контейнер для большой картинки
+            var currentImg = document.querySelector('.current'); //Ищем текущую картинку
+            var currentImgNumber = parseInt(currentImg.id.split('_')[1]); //Определяем номер текущей картинки по ее id
+            var nextImg = document.querySelector('.nav > img:nth-of-type(' + (currentImgNumber - 1) + ')'); //Ищем следующую картинку
+            var images = document.getElementsByTagName('img'); //Ищем все картинки
+            var imgLength = parseInt(images.length - 1); //Определяем номер последней картинки в галерее
+            if (nextImg === null) {
+                nextImg = images[imgLength]; //Если следующей картинки не сущесвует переходим к последней
+            }
+            nextImg.classList.add('current'); //Добавляем класс current следующей картинке
+            var nextImgNumber = nextImg.id.split('_'); //Определяем номер следующей картинки по ее id
+            currentImg.classList.remove('current'); //Удаляем класс current у текущей картинки
+            var rightSrc = 'galerey/big/' + nextImgNumber[1] + '.jpg'; //Формируем src следующей большой картинки
+            var imageDOM = document.createElement('img');
+            imageDOM.src = rightSrc; //Устанавливаем src в следующую большую картинку
+            currentDiv.innerText = '';
+            currentDiv.appendChild(imageDOM);
+        }
+    </script>
+  </body>
+</html>

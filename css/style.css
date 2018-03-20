@@ -1,0 +1,298 @@
+@font-face {
+    font-family: Montserrat; 
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: Raleway; 
+    src: url(../fonts/Raleway-Light.ttf);
+}
+@font-face {
+    font-family: Raleway-bold; 
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: Lobster-Regular; 
+    src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: OpenSans-Regular; 
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+body {
+	background-color: white;
+}
+.wrapper{
+	margin-top: 20px;
+	box-shadow: 0 3px 15px #888;
+}
+
+.center-img {
+  text-align: center;
+}
+
+.banner {
+	font-family: Lobster-Regular;
+	color: #FF4500;
+	font-size: 45px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.UnderBanner {
+	font-family: Raleway;
+	color: #FF4500;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.number{
+	font-family: Montserrat;
+	color: black;
+	font-weight:500;
+	font-size: 27px;
+	text-align: center;
+	margin-top: 80px;
+	text-indent: 0px;
+}
+
+nav{
+	background-color: #FF4500;
+	margin-top: 15px;
+}
+.menu ul{
+	margin-left: 10px;
+}
+
+.menu li>a{
+	display: block;
+	font-family: OpenSans-Regular;
+	font-weight: 700;
+	color: white;
+	font-weight:500;
+	font-size: 23px;
+	text-decoration: none;
+	padding: 10px 65px;
+	background-color: #FF4500;
+}
+
+.active {
+	color: black;
+	text-decoration: none;
+	border: 1px solid white;
+	box-shadow: 3px 3px 15px black;
+	background-color: white;
+}
+
+li>a:hover, li>a:active {
+	color:  black;
+	text-decoration: none;
+	background-color: white;
+	border: 1px solid white;
+	transition: 1s;
+	box-shadow: 3px 3px 15px #888;
+} 
+
+#home, #catalog{
+	font-family: Raleway;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.hometext{
+	text-align: center;
+	text-indent: 20px;
+}
+
+#home p{
+	text-indent: 20px;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.7;
+
+}
+
+#home h1, #catalog h1{
+	margin-bottom: 10px;
+	font-weight: 900;
+	text-align: center;
+}
+
+#home h2, #catalog h2{
+	margin-bottom: 10px;
+	font-weight: 900;
+	text-align: center;
+}
+
+#home figcaption{
+	font-weight: 900;
+	font-size: 25px;
+	color: #FF4500;
+}
+
+.comment{
+	font-size: 13px;
+}
+
+footer{
+	background-color: #FF4500;
+	font-family: Raleway;
+	font-size: 15px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	color: white;
+	padding-top: 10px;
+}
+
+footer ul{
+	font-family: Raleway-bold;
+	margin-left: 30px;	
+	font-size: 20px;
+
+}
+footer li{
+	list-style-type: none;
+		
+}
+footer a{
+	background-color: #FF4500;
+	border: 1px solid #FF4500;
+	font-family: OpenSans-Regular;
+	font-weight: 700;
+	color: white;
+	font-weight:500;
+	font-size: 15px;
+	text-decoration: none;
+}
+.footerbanner {
+	font-family: Lobster-Regular;
+	color: white;
+	font-size: 45px;
+	text-align: center;
+}
+.footernumber{
+	font-family: Montserrat;
+	font-weight:500;
+	font-size: 27px;
+	text-align: center;
+}
+
+.flex{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:space-evenly;
+	padding: 0px;
+}
+
+.items{
+	width: 230px;
+	color: white;
+	margin: 10px;
+	border: 2px solid #FF4500;
+	background-color: #FF4500;
+	box-shadow: 0px 0px 30px #888;
+}
+
+#catalog p{
+	font-size: 18px;
+	color: black;
+}
+
+#catalog p>img{
+	width: 225px;
+}
+
+#catalog figcaption{
+	font-weight: 900;
+	font-size: 25px;
+}
+
+#about p{
+	text-indent: 40px;
+	font-size: 18px;
+	padding: 0px 10px;
+	line-height: 1.7;
+	font-weight: 300;
+}
+
+#about strong{
+	color: #FF4500;
+}
+legend{
+	font-weight: 900;
+	font-size: 25px;
+	text-align: center;
+}
+
+#contact p{
+	text-indent: 20px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.6;
+}
+
+.button{
+	width: 80%;
+}
+
+form p{
+	color: #FF4500;
+}
+.contactNumber{
+	text-indent: 0px;
+	text-align: center;
+}
+
+/* галерея*/
+#btnLeft,
+#btnRight {
+    display: block;
+    border: 50px solid #FF4500;
+    margin-top: 250px;
+}
+
+#btnLeft {
+    border-left-width: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+#btnLeft:hover {
+    opacity: 0.5;
+}
+
+#btnLeft:active {
+    opacity: 0.5;
+}
+
+#btnRight {
+    border-right-width: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+#btnRight:hover {
+    opacity: 0.5;
+}
+
+#btnRight:active {
+    opacity: 0.5;
+}
+
+#big_picture img{
+	width: 100%;
+	box-shadow: 0 3px 15px #888;
+}
+
+.border{
+	border: solid 1px black;
+	background-color: yellow;
+}
+.nav{
+	margin: 10px auto;
+}
